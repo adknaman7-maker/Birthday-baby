@@ -1,124 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Happy Birthday Baby!</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #ffe6f0;
-      margin: 0;
-      padding: 20px;
-    }
-    img {
-      margin: 10px;
-      max-width: 90%;
-      height: auto;
-    }
-    .button {
-      padding: 12px 25px;
-      font-size: 18px;
-      cursor: pointer;
-      background-color: #ff69b4;
-      border: none;
-      color: white;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
-    #page2 {
-      display: none;
-    }
-    .balloon {
-      width: 80px;
-      margin: 5px;
-    }
-    .wishes {
-      font-size: 22px;
-      margin: 15px 0;
-      color: #ff1493;
-    }
-    .cake-container {
-      position: relative;
-      display: inline-block;
-    }
-    .flame {
-      width: 20px;
-      position: absolute;
-      top: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      animation: flicker 0.5s infinite;
-    }
-    @keyframes flicker {
-      0% {opacity: 1;}
-      50% {opacity: 0.5;}
-      100% {opacity: 1;}
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Happy Birthday!</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #ffe6f0;
+    margin: 0;
+    padding: 20px;
+}
+img {
+    max-width: 90%;
+    height: auto;
+    margin: 10px 0;
+}
+.button {
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #ff69b4;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+.page {
+    display: none;
+}
+.balloon {
+    width: 80px;
+    margin: 5px;
+}
+.wishes {
+    font-size: 22px;
+    color: #ff1493;
+    margin: 10px 0;
+}
+</style>
 </head>
 <body>
 
-  <!-- PAGE 1 -->
-  <div id="page1">
-    <h1>🎉 Happy Birthday Baby! 🎉</h1>
-
-    <!-- Baby Images -->
-    <img src="baby1.png" alt="Baby smiling">
-    <img src="baby2.png" alt="Baby looking cute">
-
-    <!-- Cake -->
-    <div class="cake-container">
-      <img src="cake.png" alt="Birthday Cake" width="250">
-      <img src="flame.png" alt="Flame" class="flame">
-    </div>
-
-    <!-- Balloons -->
+<!-- PAGE 1 -->
+<div id="page1" class="page" style="display:block;">
+    <h2>Play Football with Naman ⚽</h2>
+    <img src="FB_IMG_1768926945831.jpg">
     <div>
-      <img src="balloon1.png" alt="Balloon" class="balloon">
-      <img src="balloon2.png" alt="Balloon" class="balloon">
-      <img src="balloon3.png" alt="Balloon" class="balloon">
+        <button class="button" onclick="nextPage(2)">Next</button>
     </div>
+</div>
 
-    <button class="button" onclick="nextPage()">Next Step</button>
-  </div>
-
-  <!-- PAGE 2 -->
-  <div id="page2">
-    <h1>🎂 Many Happy Returns! 🎂</h1>
-
-    <!-- Wishes Messages -->
-    <div class="wishes">Play football with Naman ⚽</div>
-    <div class="wishes">Play Free Fire daily and do rank pushes 🎮</div>
-    <div class="wishes">May you have a fun-filled year ahead! 🎈</div>
-    <div class="wishes">Lots of love, joy, and surprises 💖</div>
-
-    <!-- More Cake and Balloons -->
-    <div class="cake-container">
-      <img src="cake.png" alt="Birthday Cake" width="250">
-      <img src="flame.png" alt="Flame" class="flame">
-    </div>
-
+<!-- PAGE 2 -->
+<div id="page2" class="page">
+    <h2>Play Free Fire daily 🔥</h2>
+    <img src="FB_IMG_1768926924268.jpg">
     <div>
-      <img src="balloon1.png" alt="Balloon" class="balloon">
-      <img src="balloon2.png" alt="Balloon" class="balloon">
-      <img src="balloon3.png" alt="Balloon" class="balloon">
+        <button class="button" onclick="nextPage(3)">Next</button>
     </div>
+</div>
 
-    <button class="button" onclick="goBack()">Go Back</button>
-  </div>
+<!-- PAGE 3 -->
+<div id="page3" class="page">
+    <h2>Happy Birthday Wishes 🎈🎉</h2>
+    <img src="delicious-chocolate-birthday-cake-with-candles_632498-24980.jpg">
+    <div>
+        <img class="balloon" src="https://i.imgur.com/4AiXzf8.png">
+        <img class="balloon" src="https://i.imgur.com/4AiXzf8.png">
+        <img class="balloon" src="https://i.imgur.com/4AiXzf8.png">
+    </div>
+    <div>
+        <button class="button" onclick="nextPage(4)">Next</button>
+    </div>
+</div>
 
-  <script>
-    function nextPage() {
-      document.getElementById('page1').style.display = 'none';
-      document.getElementById('page2').style.display = 'block';
-    }
+<!-- PAGE 4 -->
+<div id="page4" class="page">
+    <h2>Many Happy Returns! 🥳</h2>
+    <div class="wishes">🎂 Wishing you joy, fun, and endless happiness! 🎂</div>
+    <div class="wishes">🎈 May your day be filled with laughter and love! 🎈</div>
+    <div class="wishes">✨ Shine bright and enjoy every moment! ✨</div>
+</div>
 
-    function goBack() {
-      document.getElementById('page2').style.display = 'none';
-      document.getElementById('page1').style.display = 'block';
-    }
-  </script>
+<script>
+function nextPage(pageNum) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(p => p.style.display = 'none');
+    document.getElementById('page' + pageNum).style.display = 'block';
+}
+</script>
 
 </body>
 </html>
