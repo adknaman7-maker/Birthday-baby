@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Happy Birthday!</title>
+<title>Happy Birthday Baby!</title>
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -15,6 +15,7 @@ img {
     max-width: 90%;
     height: auto;
     margin: 10px 0;
+    border-radius: 12px;
 }
 .button {
     padding: 12px 25px;
@@ -26,13 +27,7 @@ img {
     border-radius: 8px;
     margin-top: 20px;
 }
-.page {
-    display: none;
-}
-.balloon {
-    width: 80px;
-    margin: 5px;
-}
+.page { display: none; }
 .wishes {
     font-size: 22px;
     color: #ff1493;
@@ -44,49 +39,42 @@ img {
 
 <!-- PAGE 1 -->
 <div id="page1" class="page" style="display:block;">
-    <h2>Play Football with Naman ⚽</h2>
-    <img src="FB_IMG_1768926945831.jpg">
-    <div>
-        <button class="button" onclick="nextPage(2)">Next</button>
-    </div>
+    <h1>🎉 Happy Birthday Baby! 🎉</h1>
+    <img src="https://raw.githubusercontent.com/adknaman7-maker/Birthday-baby/main/FB_IMG_1768926945831.jpg">
+    <button class="button" onclick="nextPage(2)">Next</button>
 </div>
 
 <!-- PAGE 2 -->
 <div id="page2" class="page">
-    <h2>Play Free Fire daily 🔥</h2>
-    <img src="FB_IMG_1768926924268.jpg">
-    <div>
-        <button class="button" onclick="nextPage(3)">Next</button>
-    </div>
+    <h2>🎮 Play & Fun 🎮</h2>
+    <div class="wishes">Play football with Naman ⚽</div>
+    <div class="wishes">Play Free Fire daily & do rank pushes 🔥</div>
+    <img src="https://raw.githubusercontent.com/adknaman7-maker/Birthday-baby/main/FB_IMG_17689294268.jpg">
+    <button class="button" onclick="nextPage(3)">Next</button>
 </div>
 
 <!-- PAGE 3 -->
 <div id="page3" class="page">
-    <h2>Happy Birthday Wishes 🎈🎉</h2>
-    <img src="delicious-chocolate-birthday-cake-with-candles_632498-24980.jpg">
-    <div>
-        <img class="balloon" src="https://i.imgur.com/4AiXzf8.png">
-        <img class="balloon" src="https://i.imgur.com/4AiXzf8.png">
-        <img class="balloon" src="https://i.imgur.com/4AiXzf8.png">
-    </div>
-    <div>
-        <button class="button" onclick="nextPage(4)">Next</button>
-    </div>
+    <h2>🎂 Cake Time! 🎂</h2>
+    <img src="https://raw.githubusercontent.com/adknaman7-maker/Birthday-baby/main/delicious-chocolate-birthday-cake-with-candles_632498-24980.jpg">
+    <div class="wishes">Make a wish and cut the cake!</div>
+    <button class="button" onclick="nextPage(4)">Next</button>
 </div>
 
 <!-- PAGE 4 -->
 <div id="page4" class="page">
-    <h2>Many Happy Returns! 🥳</h2>
-    <div class="wishes">🎂 Wishing you joy, fun, and endless happiness! 🎂</div>
-    <div class="wishes">🎈 May your day be filled with laughter and love! 🎈</div>
-    <div class="wishes">✨ Shine bright and enjoy every moment! ✨</div>
+    <h2>🥳 Many Happy Returns! 🥳</h2>
+    <div class="wishes">🎉 May your day be filled with love and laughter!</div>
+    <div class="wishes">🎈 Wishing you endless joy, fun, and happiness!</div>
+    <div class="wishes">🎁 May all your dreams come true!</div>
+    <div class="wishes">✨ Shine bright and enjoy every moment!</div>
 </div>
 
 <script>
-function nextPage(pageNum) {
+function nextPage(pageNum){
     const pages = document.querySelectorAll('.page');
-    pages.forEach(p => p.style.display = 'none');
-    document.getElementById('page' + pageNum).style.display = 'block';
+    pages.forEach(p => p.style.display='none');
+    document.getElementById('page'+pageNum).style.display='block';
 }
 </script>
 
