@@ -3,78 +3,130 @@
 <head>
 <meta charset="UTF-8">
 <title>Happy Birthday Baby!</title>
+
 <style>
+/* GLOBAL */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background: #ffe6f0;
+    background: linear-gradient(to bottom, #ffe6f0, #ffffff);
     margin: 0;
-    padding: 20px;
+    padding: 25px;
+    font-size: 28px; /* VERY BIG BASE FONT */
 }
-img {
-    max-width: 90%;
+
+/* BALLOON IMAGE */
+.balloon-img {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    display: block;
+}
+
+/* IMAGES */
+img.main-img {
+    max-width: 95%;
     height: auto;
-    margin: 10px 0;
-    border-radius: 12px;
+    margin: 25px 0;
+    border-radius: 20px;
 }
+
+/* BUTTON */
 .button {
-    padding: 12px 25px;
-    font-size: 18px;
+    padding: 22px 45px;
+    font-size: 30px;
     cursor: pointer;
-    background-color: #ff69b4;
+    background-color: #ff1493;
     border: none;
     color: white;
-    border-radius: 8px;
-    margin-top: 20px;
+    border-radius: 14px;
+    margin-top: 30px;
 }
-.page { display: none; }
+
+/* PAGE */
+.page {
+    display: none;
+}
+
+/* WISH TEXT */
 .wishes {
-    font-size: 22px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff0080;
+    margin: 22px 0;
+}
+
+/* HEADINGS */
+h1 {
+    font-size: 48px;
     color: #ff1493;
-    margin: 10px 0;
+}
+
+h2 {
+    font-size: 42px;
+    color: #ff1493;
 }
 </style>
 </head>
+
 <body>
 
 <!-- PAGE 1 -->
 <div id="page1" class="page" style="display:block;">
-    <h1>🎉 Happy Birthday Baby! 🎉</h1>
-    <img src="https://raw.githubusercontent.com/adknaman7-maker/Birthday-baby/main/FB_IMG_1768926945831.jpg">
-    <button class="button" onclick="nextPage(2)">Next</button>
+    <img src="https://raw.githubusercontent.com/adknaman7-maker/Birthday-baby/main/27c78feeb5f9b928c3741941a3701a3a.jpg_720x720q80.jpg" class="balloon-img">
+
+    <h1>🎉 HAPPY BIRTHDAY BABY 🎉</h1>
+
+    <img src="https://raw.githubusercontent.com/adknaman7-maker/Birthday-baby/main/FB_IMG_1768926945831.jpg" class="main-img">
+
+    <div class="wishes">💖 YOU ARE VERY SPECIAL 💖</div>
+
+    <button class="button" onclick="nextPage(2)">NEXT ➡️</button>
 </div>
 
 <!-- PAGE 2 -->
 <div id="page2" class="page">
-    <h2>🎮 Play & Fun 🎮</h2>
-    <div class="wishes">Play football with Naman ⚽</div>
-    <div class="wishes">Play Free Fire daily & do rank pushes 🔥</div>
-    <img src="https://raw.githubusercontent.com/adknaman7-maker/Birthday-baby/main/FB_IMG_17689294268.jpg">
-    <button class="button" onclick="nextPage(3)">Next</button>
+    <img src="https://raw.githubusercontent.com/adknaman7-maker/Birthday-baby/main/27c78feeb5f9b928c3741941a3701a3a.jpg_720x720q80.jpg" class="balloon-img">
+
+    <h2>🎮 PLAY & FUN 🎮</h2>
+
+    <div class="wishes">⚽ PLAY FOOTBALL WITH NAMAN</div>
+    <div class="wishes">🔥 PLAY FREE FIRE & RANK PUSH</div>
+
+    <img src="https://raw.githubusercontent.com/adknaman7-maker/Birthday-baby/main/FB_IMG_17689294268.jpg" class="main-img">
+
+    <button class="button" onclick="nextPage(3)">NEXT ➡️</button>
 </div>
 
 <!-- PAGE 3 -->
 <div id="page3" class="page">
-    <h2>🎂 Cake Time! 🎂</h2>
-    <img src="https://raw.githubusercontent.com/adknaman7-maker/Birthday-baby/main/delicious-chocolate-birthday-cake-with-candles_632498-24980.jpg">
-    <div class="wishes">Make a wish and cut the cake!</div>
-    <button class="button" onclick="nextPage(4)">Next</button>
+    <img src="https://raw.githubusercontent.com/adknaman7-maker/Birthday-baby/main/27c78feeb5f9b928c3741941a3701a3a.jpg_720x720q80.jpg" class="balloon-img">
+
+    <h2>🎂 CAKE TIME 🎂</h2>
+
+    <img src="https://raw.githubusercontent.com/adknaman7-maker/Birthday-baby/main/delicious-chocolate-birthday-cake-with-candles_632498-24980.jpg" class="main-img">
+
+    <div class="wishes">✨ MAKE A WISH & CUT THE CAKE ✨</div>
+
+    <button class="button" onclick="nextPage(4)">NEXT ➡️</button>
 </div>
 
 <!-- PAGE 4 -->
 <div id="page4" class="page">
-    <h2>🥳 Many Happy Returns! 🥳</h2>
-    <div class="wishes">🎉 May your day be filled with love and laughter!</div>
-    <div class="wishes">🎈 Wishing you endless joy, fun, and happiness!</div>
-    <div class="wishes">🎁 May all your dreams come true!</div>
-    <div class="wishes">✨ Shine bright and enjoy every moment!</div>
+    <img src="https://raw.githubusercontent.com/adknaman7-maker/Birthday-baby/main/27c78feeb5f9b928c3741941a3701a3a.jpg_720x720q80.jpg" class="balloon-img">
+
+    <h2>🥳 MANY HAPPY RETURNS 🥳</h2>
+
+    <div class="wishes">🎉 LOVE • JOY • HAPPINESS 🎉</div>
+    <div class="wishes">🎈 ENJOY YOUR SPECIAL DAY 🎈</div>
+    <div class="wishes">🎁 ALL DREAMS COME TRUE 🎁</div>
 </div>
 
 <script>
-function nextPage(pageNum){
+function nextPage(pageNum) {
     const pages = document.querySelectorAll('.page');
-    pages.forEach(p => p.style.display='none');
-    document.getElementById('page'+pageNum).style.display='block';
+    pages.forEach(p => p.style.display = 'none');
+    document.getElementById('page' + pageNum).style.display = 'block';
 }
 </script>
 
